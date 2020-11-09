@@ -27,19 +27,16 @@
       <dict>
         <key>horizontal</key>
         <array>
-          <string>One</string>
-          <string>Two</string>
+          <string>X</string>
         </array>
       </dict>
       <key>com.letterror.skateboard.previewLocation</key>
       <dict>
-        <key>One</key>
-        <real>0.0</real>
-        <key>Two</key>
+        <key>X</key>
         <real>0.0</real>
       </dict>
       <key>com.letterror.skateboard.previewText</key>
-      <string>SKATEBOARD</string>
+      <string> B C</string>
     </dict>
   </lib>
 </designspace>
