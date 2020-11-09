@@ -6,7 +6,7 @@ Recently, @blackfoundry has recently shared [some excellent examples of NLI on T
 - Rotating a rectangle by 180 degrees
 - Smoothly opening & closing the letter C
 
-![Three non-linear interpolation tests](videos/nli-test-A-B-C.mp4)
+![Three non-linear interpolation tests](videos/nli-test-A-B-C.gif)
 
 ## Background
 
