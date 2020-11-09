@@ -52,7 +52,7 @@ By contrast, this repo is just a quick way to test one small aspect of NLI: how 
 
 If you draw type or use the pen tool in graphic software like Adobe Illustrator, you are already familiar with cubic curves. Here is a cubic curve as respresented in RoboFont:
 
-![cubic curve](assets/cubic-curve.png)
+![cubic curve](videos/cubic-curve.png)
 
 A cubic bezier is drawn with:
 
