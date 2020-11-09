@@ -32,35 +32,40 @@
             --cubic-three: 0;
             --linear-one: 0;
         }
+        h2 {
+            border-top: solid #ccc 1px;
+            padding-top: 1rem;
+            margin-top: 3rem;
+        }
         span {
             text-align: center;
             font-size: 32vw;
             line-height: 1.5;
         }
-
         .example {
             display: grid;
         }
-
         @media (min-width: 1000px) {
             .example span {
                 order: 2;
             }
         }
-
         #example-quadratic{
             font-family: 'NLI-Test';
             font-variation-settings: "1111" var(--axis-one), "2222" var(--axis-two);
         }
-
         #example-cubic {
             font-family: 'NLI-Test-Cubic';
             font-variation-settings: "XXXX" var(--cubic-one), "YYYY" var(--cubic-two), "ZZZZ" var(--cubic-three);
         }
-
         #example-linear {
             font-family: 'NLI-Test-Linear';
             font-variation-settings: "XXXX" var(--linear-one);
+        }
+        #footer, #footer a {
+            color: #666;
+            text-align: center;
+            margin-top: 6rem;
         }
     </style>
 </head>
@@ -85,7 +90,7 @@
         <span id="example-linear">B C</span>
         <input class="slider" id="slider-linear" type="range" min="0" max="100" value="0">
     </div>
-    <p>Made by <a href="https://arrowtype.com">@ArrowType</a></p>
+    <p id="footer">Made by <a href="https://arrowtype.com">@ArrowType</a></p>
 </body>
 <script>
 
