@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="4.1">
+  <axes>
+    <axis tag="XXXX" name="X" minimum="0" maximum="100" default="0"/>
+    <axis tag="YYYY" name="Y" minimum="0" maximum="100" default="0"/>
+    <axis tag="ZZZZ" name="Z" minimum="0" maximum="100" default="0"/>
+  </axes>
+  <sources>
+    <source filename="nli-test_A.ufo">
+      <lib copy="1"/>
+      <groups copy="1"/>
+      <features copy="1"/>
+      <info copy="1"/>
+      <location>
+        <dimension name="X" xvalue="0"/>
+        <dimension name="Y" xvalue="0"/>
+        <dimension name="Z" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="nli-test_C.ufo">
+      <location>
+        <dimension name="X" xvalue="100"/>
+        <dimension name="Y" xvalue="0"/>
+        <dimension name="Z" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="nli-test_C.ufo">
+      <location>
+        <dimension name="X" xvalue="0"/>
+        <dimension name="Y" xvalue="100"/>
+        <dimension name="Z" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="nli-test_C.ufo">
+      <location>
+        <dimension name="X" xvalue="0"/>
+        <dimension name="Y" xvalue="0"/>
+        <dimension name="Z" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="nli-test_D.ufo">
+      <location>
+        <dimension name="X" xvalue="100"/>
+        <dimension name="Y" xvalue="100"/>
+        <dimension name="Z" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="nli-test_D.ufo">
+      <location>
+        <dimension name="X" xvalue="100"/>
+        <dimension name="Y" xvalue="0"/>
+        <dimension name="Z" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="nli-test_D.ufo">
+      <location>
+        <dimension name="X" xvalue="0"/>
+        <dimension name="Y" xvalue="100"/>
+        <dimension name="Z" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="nli-test_B.ufo">
+      <location>
+        <dimension name="X" xvalue="100"/>
+        <dimension name="Y" xvalue="100"/>
+        <dimension name="Z" xvalue="100"/>
+      </location>
+    </source>
+  </sources>
+  <lib>
+    <dict>
+      <key>com.letterror.mathModelPref</key>
+      <string>previewVarLib</string>
+      <key>com.letterror.skateboard.interactionSources</key>
+      <dict>
+        <key>horizontal</key>
+        <array>
+          <string>One</string>
+          <string>Two</string>
+        </array>
+      </dict>
+      <key>com.letterror.skateboard.previewLocation</key>
+      <dict>
+        <key>One</key>
+        <real>0.0</real>
+        <key>Two</key>
+        <real>0.0</real>
+      </dict>
+      <key>com.letterror.skateboard.previewText</key>
+      <string>SKATEBOARD</string>
+    </dict>
+  </lib>
+</designspace>
