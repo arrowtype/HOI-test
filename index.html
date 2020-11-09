@@ -14,24 +14,45 @@
             font-family: 'NLI-Test';
             src: url("./fonts/nli-test-VF.ttf");
         }
+        @font-face {
+            font-family: 'NLI-Test-Cubic';
+            src: url("./fonts/nli-test-cubic-VF.ttf");
+        }
         :root {
             --axis-one: 0;
             --axis-two: 0;
+            --cubic-one: 0;
+            --cubic-two: 0;
+            --cubic-three: 0;
         }
         span {
-            font-family: 'NLI-Test';
             text-align: center;
             font-size: 32vw;
             line-height: 1.5;
+        }
+
+        #example{
+            font-family: 'NLI-Test';
             font-variation-settings: "1111" var(--axis-one), "2222" var(--axis-two);
+        }
+
+        #example-cubic {
+            font-family: 'NLI-Test-Cubic';
+            font-variation-settings: "XXXX" var(--cubic-one), "YYYY" var(--cubic-two), "ZZZZ" var(--cubic-three);
         }
     </style>
 </head>
 <body>
     <h1>Non-Linear Interpolation Tests</h1>
     <p>See <a href="https://github.com/arrowtype/NLI-test">github.com/arrowtype/NLI-test</a> for more information.</p>
+    <h2>Quadratic Example</h2>
+    <p>Not too hard to make, but has some limitations in rotation.</p>
     <input id="dual-slider" type="range" min="0" max="100" value="0">
     <span id="example">A B C</span>
+    <h2>Cubic Example</h2>
+    <p>A bit harder to make, but able to do curvier interpolations.</p>
+    <input id="trio-slider-cubic" type="range" min="0" max="100" value="0">
+    <span id="example-cubic">B C</span>
 </body>
 <script>
 
@@ -41,6 +62,15 @@ const example=document.querySelector("#example");
 slider.addEventListener("input", () => {
   example.style.setProperty("--axis-one",slider.value);
   example.style.setProperty("--axis-two",slider.value);
+});
+
+const sliderCubic=document.querySelector("#trio-slider-cubic");
+const exampleCubic=document.querySelector("#example-cubic");
+
+sliderCubic.addEventListener("input", () => {
+  exampleCubic.style.setProperty("--cubic-one",sliderCubic.value);
+  exampleCubic.style.setProperty("--cubic-two",sliderCubic.value);
+  exampleCubic.style.setProperty("--cubic-three",sliderCubic.value);
 });
 
 </script>
