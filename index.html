@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display:grid;
+            font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+        }
+        @font-face {
+            font-family: 'NLI-Test';
+            src: url("./variable_ttf/nli-test-VF.ttf");
+        }
+        :root {
+            --axis-one: 0;
+            --axis-two: 0;
+        }
+        span {
+            font-family: 'NLI-Test';
+            text-align: center;
+            font-size: 32vw;
+            line-height: 1.5;
+            font-variation-settings: "1111" var(--axis-one), "2222" var(--axis-two);
+        }
+    </style>
+</head>
+<body>
+    <h1>Non-Linear Interpolation Tests</h1>
+    <p>See <a href="https://github.com/arrowtype/NLI-test">arrowtype/NLI-test</a> for an explanation.</p>
+    <input id="dual-slider" type="range" min="0" max="100" value="0">
+    <span id="example">A B C</span>
+</body>
+<script>
+
+const slider=document.querySelector("#dual-slider");
+const example=document.querySelector("#example");
+
+slider.addEventListener("input", () => {
+  example.style.setProperty("--axis-one",slider.value);
+  example.style.setProperty("--axis-two",slider.value);
+});
+
+</script>
+</html>
