@@ -1,4 +1,6 @@
-# Non-Linear Interpolation (NLI), a shared exploration & test
+# A shared exploration of Non-Linear Interpolation (NLI)
+
+[A simple web demo of this test font ↗](https://arrowtype.github.io/NLI-test/index.html)
 
 Recently, @blackfoundry has recently shared [some excellent examples of NLI on Twitter](https://twitter.com/blackfoundry/status/1325201254964883456). In fact, I think they may have coined the term NLI in terms of type design (but I’ll update this detail if I learn this is incorrect). A discussion of this prompted me to explore it further on my own, and I wanted to share the sources of this exploration, in hopes that it may help others to better understand this exploratory area of type design. So, this repo includes UFO sources plus a designspace which sets up a few simple non-linear interpolation tests:
 
