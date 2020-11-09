@@ -40,7 +40,7 @@ One thing that can partially simplify that: instead of drawing cubic designspace
 
 If you draw type or use the pen tool in graphic software like Adobe Illustrator, you are familiar with cubic curves. But, quadratic curves are somewhat simpler. Here are two examples from the amazing [A Primer on Bézier Curves](https://pomax.github.io/bezierinfo/) (see this for a deep-dive on different types of Bézier curves as well as the math behind them):
 
-![Bézier Curves, Quadratic vs Cubic](videos/bezier-examples.mp4)
+![Bézier Curves, Quadratic vs Cubic](videos/bezier-examples.gif)
 
 So, we can use that same principle to create the middle drawing of an NLI designspace. And then critically, because of the way Bézier curves & interpolation work, you need to make *two* axes:
 
