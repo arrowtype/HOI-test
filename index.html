@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NLI Test Demo</title>
-    <link rel="stylesheet" href="sliders.css">
+    <link rel="stylesheet" href="demo-sliders.css">
     <style>
         body {
-            margin: 2.5vw;
+            margin: 5vw;
             padding-bottom: 8rem;
             display:grid;
             font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
@@ -20,12 +20,17 @@
             font-family: 'NLI-Test-Cubic';
             src: url("./fonts/nli-test-cubic-VF.ttf");
         }
+        @font-face {
+            font-family: 'NLI-Test-Linear';
+            src: url("./fonts/nli-test-linear-VF.ttf");
+        }
         :root {
             --axis-one: 0;
             --axis-two: 0;
             --cubic-one: 0;
             --cubic-two: 0;
             --cubic-three: 0;
+            --linear-one: 0;
         }
         span {
             text-align: center;
@@ -52,24 +57,35 @@
             font-family: 'NLI-Test-Cubic';
             font-variation-settings: "XXXX" var(--cubic-one), "YYYY" var(--cubic-two), "ZZZZ" var(--cubic-three);
         }
+
+        #example-linear {
+            font-family: 'NLI-Test-Linear';
+            font-variation-settings: "XXXX" var(--linear-one);
+        }
     </style>
 </head>
 <body>
-    <h1>Non-Linear Interpolation Tests</h1>
-    <p>See <a href="https://github.com/arrowtype/NLI-test">github.com/arrowtype/NLI-test</a> for more information.</p>
+    <h1>Non-Linear Interpolation (NLI) Tests</h1>
+    <p>See <a href="https://github.com/arrowtype/NLI-test">github.com/arrowtype/NLI-test</a> for details, sources, and a written explanation.</p>
     <h2>Quadratic Example</h2>
-    <p>Not too hard to make, but has some limitations in rotation.</p>
+    <p>Allows curved interpolations while being reasonably simple to design. Has some limitations in rotation.</p>
     <div class="example">
         <span id="example-quadratic">A B C</span>
         <input class="slider" id="dual-slider" type="range" min="0" max="100" value="0">
     </div>
-    <hr/>
     <h2>Cubic Example</h2>
-    <p>A bit harder to make, but able to do curvier interpolations.</p>
+    <p>A bit harder to make, but able to do curvier interpolations up to 180-degree rotation (beyond this, you would need an additional dimension or an additional step).</p>
     <div class="example">
         <span id="example-cubic">B C</span>
         <input class="slider" id="trio-slider-cubic" type="range" min="0" max="100" value="0">
     </div>
+    <h2>Linear Example, for comparison</h2>
+    <p>Much simpler to make with existing tools and useful for many things, but totally unable to do rotation.</p>
+    <div class="example">
+        <span id="example-linear">B C</span>
+        <input class="slider" id="slider-linear" type="range" min="0" max="100" value="0">
+    </div>
+    <p>Made by <a href="https://arrowtype.com">@ArrowType</a></p>
 </body>
 <script>
 
@@ -88,6 +104,13 @@ sliderCubic.addEventListener("input", () => {
   exampleCubic.style.setProperty("--cubic-one",sliderCubic.value);
   exampleCubic.style.setProperty("--cubic-two",sliderCubic.value);
   exampleCubic.style.setProperty("--cubic-three",sliderCubic.value);
+});
+
+const sliderLinear=document.querySelector("#slider-linear");
+const exampleLinear=document.querySelector("#example-linear");
+
+sliderLinear.addEventListener("input", () => {
+  exampleLinear.style.setProperty("--linear-one",sliderLinear.value);
 });
 
 </script>
