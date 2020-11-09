@@ -2,7 +2,13 @@
 
 [A simple web demo of this test font ↗](https://arrowtype.github.io/NLI-test/index.html)
 
-Recently, [@blackfoundry](https://github.com/BlackFoundryCom) has recently shared [some excellent examples of NLI on Twitter](https://twitter.com/blackfoundry/status/1325201254964883456). In fact, I think they may have coined the term NLI in terms of type design (but I’ll update this detail if I learn this is incorrect). A discussion of this prompted me to explore it further on my own, and I wanted to share the sources of this exploration, in hopes that it may help others to better understand this exploratory area of type design. 
+In April 2018, Underware Type stunned the TypoLabs Berlin audience by announcing their new concept of *Higher-Order Interpolation* (HOI). They explained this in [a must-read article](https://underware.nl/case-studies/hoi/), complete with helpful diagrams & animations to show the discovery. In fact, they probably describe it better than me, so you might consider saving time and going straight to the original.
+
+Recently, [@blackfoundry](https://github.com/BlackFoundryCom) has recently shared [some excellent examples of Non-Linear Interpolation (NLI) on Twitter](https://twitter.com/blackfoundry/status/1325201254964883456). In fact, I think they may have coined the term NLI in terms of type design. [A discussion of this](https://twitter.com/w__h_/status/1325223161395249152?s=20) prompted me to explore it further on my own. I never felt like I could quite understand the concept of NLI at a gut level – partly because I can get quickly confused by math, and partly because I just never took the time to do it myself.
+
+So, I finally sat down to figure out a simple, working test. Having figured out how to reproduce the basics of NLI, I wanted to share the sources of this exploration, in hopes that it may help others to better understand this exploratory area of type design.
+
+Sidenote: I am mostly using the term *NLI* in this article – to me, NLI is a bit more self-explanatory, more-constrained term for the theory I am covering here. I say more about this below.
 
 So, this repo includes UFO sources plus a designspace which sets up a few simple non-linear interpolation tests:
 
@@ -157,7 +163,7 @@ Simplifying NLI by using a quadratic approach makes it reasonably approachable, 
 
 A workflow for Cubic NLI can be roughly similar to the quadratic workflow, but can involve drawing intended interpolation curves on a background layer, then matching this in the intermediate sources.
 
-### Cubic vs Quadratic NLI
+## Cubic vs Quadratic NLI
 
 Cubic curves can create a much wider range of shapes than quadratic curves – see the Pomax guide’s [Circles and quadratic Bézier curves](https://pomax.github.io/bezierinfo/#circles) and [Circles and cubic Bézier curves](https://pomax.github.io/bezierinfo/#circles_cubic) for demoes & explanations of this.
 
@@ -171,3 +177,18 @@ Specific limitations found in these quadratic NLI tests:
 These can be made better in Cubic interpolations, but as you can see, Cubic interpolations are somewhat more difficult to draw. And if you layered on additional axes (like Weight), this would all get even more complex. So, for some projects, quadratic NLI might be just the right balance of interpolation control with an accessible workflow.
 
 I’ve [posted about this on Twitter](https://twitter.com/ArrowType/status/1325648820101853184). If you have a question or comment, feel free to join in on the discussion!
+
+## Life beyond Quadratic & Cubic NLI
+
+The examples here only cover quadratic & cubic NLI. Or, as UnderWare would call it, just the first two “orders” of interpolation. If you wish to make a point curve in more complex ways (e.g. to make a full rotatation or a compound/S-shaped curve), there are basically two options:
+
+- Interpolating with a higher order, which adds n+1 source & axis for each order
+- Stacking up multiple interpolations, perhaps using designspace “rules” (OpenType `rvrn` or `rclt` substitutions), e.g. to swap from `C.part1` to `C.part2` and so on. The advantage here is that it easier to draw plans for in existing tools, and easier to mentally consider.
+
+## Is this practical?
+
+Clearly, [UnderWare has already shown](http://www.grammato.com/) that they can make fonts using curved interpolation for such purposes of making fonts that can better reproduce handwriting for striking visual effects. BlackFoundry is using the concept to make more-flexible components.
+
+It’s hard to say for sure whether NLI will be a technique adopted by the mainstream of type designers. There are hurdles: as complicated as it is to produce even a quadratic NLI, it would likely require at twice as many drawings to produce a typical *Weight* axis on top of this. For me, this is hard to imagine – but maybe I just have to try it before knowing.
+
+In the long run, it seems perhaps inevitable that NLI will be used by more designers, but it will make this accessible & efficient. Here’s hoping to a Non-Linear future!
