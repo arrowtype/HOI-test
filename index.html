@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NLI Test Demo</title>
+    <link rel="stylesheet" href="sliders.css">
     <style>
         body {
             margin: 2.5vw;
@@ -31,7 +32,17 @@
             line-height: 1.5;
         }
 
-        #example{
+        .example {
+            display: grid;
+        }
+
+        @media (min-width: 1000px) {
+            .example span {
+                order: 2;
+            }
+        }
+
+        #example-quadratic{
             font-family: 'NLI-Test';
             font-variation-settings: "1111" var(--axis-one), "2222" var(--axis-two);
         }
@@ -47,17 +58,22 @@
     <p>See <a href="https://github.com/arrowtype/NLI-test">github.com/arrowtype/NLI-test</a> for more information.</p>
     <h2>Quadratic Example</h2>
     <p>Not too hard to make, but has some limitations in rotation.</p>
-    <input id="dual-slider" type="range" min="0" max="100" value="0">
-    <span id="example">A B C</span>
+    <div class="example">
+        <span id="example-quadratic">A B C</span>
+        <input class="slider" id="dual-slider" type="range" min="0" max="100" value="0">
+    </div>
+    <hr/>
     <h2>Cubic Example</h2>
     <p>A bit harder to make, but able to do curvier interpolations.</p>
-    <input id="trio-slider-cubic" type="range" min="0" max="100" value="0">
-    <span id="example-cubic">B C</span>
+    <div class="example">
+        <span id="example-cubic">B C</span>
+        <input class="slider" id="trio-slider-cubic" type="range" min="0" max="100" value="0">
+    </div>
 </body>
 <script>
 
 const slider=document.querySelector("#dual-slider");
-const example=document.querySelector("#example");
+const example=document.querySelector("#example-quadratic");
 
 slider.addEventListener("input", () => {
   example.style.setProperty("--axis-one",slider.value);
