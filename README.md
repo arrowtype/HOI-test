@@ -99,15 +99,15 @@ This cube, then, looks something like this:
            x →                   
 ```
 
-And then, this allows a smooth, cubic-curved interplation.
+When you move axes X, Y, & Z, the points can move in a smooth, cubic-curved interplation.
 
-Make sense? If not, don’t feel bad – I had to see this explained a bunch of times to finally start to grock it.
+Make sense? If not, don’t worry – I had to see this explained a bunch of times to finally start to grock it. (There is still a lot about this that I don’t entirely understand, either.)
 
-If it *does* make sense, you will then realize that the hard part is knowing how to *draw* those offcurve positions, because those shapes tend to look weird and are unintuitive.
+If it *does* make some sense, you will then realize that the hard part is knowing how to *draw* those offcurve positions, because those shapes tend to look weird and are unintuitive.
 
 One thing that can partially simplify that: instead of drawing cubic designspaces, you can instead draw quadratic designspaces – using just one "offcurve" source and only two axes. This simplifies the process somewhat.
 
-## Quadratic
+## Quadratic NLI
 
 Quadratic curves are somewhat simpler, and this allows quadratic NLI to be somewhat simpler, too. 
 
@@ -169,3 +169,5 @@ Specific limitations found in these quadratic NLI tests:
 - Does the `C` look good all the way through the interpolation? It probably depends on how particular you are about it. Certainly, it’s a much better transformation than linear interpolation would allow, but not perfect.
 
 These can be made better in Cubic interpolations, but as you can see, Cubic interpolations are somewhat more difficult to draw. And if you layered on additional axes (like Weight), this would all get even more complex. So, for some projects, quadratic NLI might be just the right balance of interpolation control with an accessible workflow.
+
+I’ve [posted about this on Twitter](https://twitter.com/ArrowType/status/1325648820101853184). If you have a question or comment, feel free to join in on the discussion!
