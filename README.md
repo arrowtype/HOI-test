@@ -2,15 +2,15 @@
 
 [A simple web demo of this test font ↗](https://arrowtype.github.io/NLI-test/index.html)
 
-In April 2018, Underware Type stunned the TypoLabs Berlin audience by announcing their new concept of *Higher-Order Interpolation* (HOI). They explained this in [a must-read article](https://underware.nl/case-studies/hoi/), complete with helpful diagrams & animations to show the discovery. In fact, they probably describe it better than me, so you might consider saving time and going straight to the original.
+In April 2018, Underware Type stunned the TypoLabs Berlin audience by announcing their new concept of *Higher-Order Interpolation* (HOI). They explained this in [a must-read article](https://underware.nl/case-studies/hoi/), complete with helpful diagrams & animations to show the discovery. In fact, they probably describe it better there than I have here, so you might consider saving time and going straight to the original. But, if you’re still confused, this article (and trying it for yourself) might help explain it further!
 
 Recently, [@blackfoundry](https://github.com/BlackFoundryCom) has recently shared [some excellent examples of Non-Linear Interpolation (NLI) on Twitter](https://twitter.com/blackfoundry/status/1325201254964883456). In fact, I think they may have coined the term NLI in terms of type design. [A discussion of this](https://twitter.com/w__h_/status/1325223161395249152?s=20) prompted me to explore it further on my own. I never felt like I could quite understand the concept of NLI at a gut level – partly because I can get quickly confused by math, and partly because I just never took the time to do it myself.
 
-So, I finally sat down to figure out a simple, working test. Having figured out how to reproduce the basics of NLI, I wanted to share the sources of this exploration, in hopes that it may help others to better understand this exploratory area of type design.
+Sidenote: I am mostly using the term *NLI* in this article – to me, NLI is a bit more of a focused, self-explanatory term for the mathematical/typographci theory I am covering here, while HOI in my mind encompasses UnderWare’s wider processes for making use of it. I say more about this below.
 
-Sidenote: I am mostly using the term *NLI* in this article – to me, NLI is a bit more self-explanatory, more-constrained term for the theory I am covering here. I say more about this below.
+So, this weekend, I finally sat down to figure out a simple, working test. Having figured out how to reproduce the basics of NLI, I wanted to share the sources of this exploration, in hopes that it may help others to better understand this exploratory area of type design.
 
-So, this repo includes UFO sources plus a designspace which sets up a few simple non-linear interpolation tests:
+This repo includes UFO sources plus a designspace which sets up a few simple non-linear interpolation tests:
 
 - Rotating a rectangle by 90 degrees
 - Rotating a rectangle by 180 degrees
@@ -18,9 +18,11 @@ So, this repo includes UFO sources plus a designspace which sets up a few simple
 
 ![Three non-linear interpolation tests](videos/nli-test-A-B-C.gif)
 
-A later addition has added the second & third tests with Cubic NLI, to show how Cubic interpolation is possible, but somewhat harder to achieve.
+A later addition has added tests with Cubic NLI to show how Cubic interpolation is possible, but somewhat harder to achieve, and an example using standard (linear) interpolation to show its limitations.
 
-## Background
+## Additional Background
+
+### Interpolation
 
 Variable fonts use *interpolation* to create intermediate results from two or more sources. [RoboFont defines interpolation](https://robofont.com/documentation/how-tos/interpolation-introduction/) in a helpful way:
 
@@ -102,7 +104,7 @@ This cube, then, looks something like this:
    |   /           |   /       
    | /             | /         
    A – – – – – – – C           
-           x →                   
+           x →                 
 ```
 
 When you move axes X, Y, & Z, the points can move in a smooth, cubic-curved interplation.
