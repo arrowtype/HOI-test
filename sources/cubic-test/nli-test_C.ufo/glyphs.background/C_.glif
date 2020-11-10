@@ -72,21 +72,4 @@
       <point x="663" y="402" type="curve" smooth="yes"/>
     </contour>
   </outline>
-  <lib>
-    <dict>
-      <key>com.typemytype.robofont.trailingOffCurves</key>
-      <dict>
-        <key>q5IGgsfT8J</key>
-        <array>
-          <integer>667</integer>
-          <integer>358</integer>
-        </array>
-        <key>r72OlvwIhb</key>
-        <array>
-          <integer>834</integer>
-          <integer>344</integer>
-        </array>
-      </dict>
-    </dict>
-  </lib>
 </glyph>

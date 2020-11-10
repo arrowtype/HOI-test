@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="D" format="2">
+  <advance width="600"/>
+  <unicode hex="0044"/>
+  <outline>
+    <contour identifier="kPrLv8zVLU">
+      <point x="48" y="45" type="move"/>
+      <point x="53" y="434"/>
+      <point x="239" y="660"/>
+      <point x="557" y="713" type="curve"/>
+    </contour>
+    <contour>
+      <point x="317" y="122" type="move"/>
+      <point x="316" y="272"/>
+      <point x="466" y="123"/>
+      <point x="466" y="272" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.trailingOffCurves</key>
+      <dict>
+        <key>kPrLv8zVLU</key>
+        <array>
+          <integer>557</integer>
+          <integer>713</integer>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+</glyph>
