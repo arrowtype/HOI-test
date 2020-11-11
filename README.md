@@ -65,7 +65,7 @@ If you draw type or use the pen tool in graphic software like Adobe Illustrator,
 A cubic bezier is drawn with:
 
 1. A start point
-2. An first offcurve point
+2. A first offcurve point
 3. A second offcurve point
 4. An end point
 
