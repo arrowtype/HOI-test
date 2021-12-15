@@ -193,4 +193,4 @@ Clearly, [UnderWare has already shown](http://www.grammato.com/) that they can m
 
 It’s hard to say for sure whether NLI will be a technique adopted by the mainstream of type designers. There are hurdles: as complicated as it is to produce even a quadratic NLI, it would likely require at twice as many drawings to produce a typical *Weight* axis on top of this. For me, this is hard to imagine – but maybe I just have to try it before knowing.
 
-In the long run, it seems perhaps inevitable that NLI will be used by more designers, but it will make this accessible & efficient. Here’s hoping to a Non-Linear future!
+In the long run, it seems likely or inevitable that NLI will be used by more designers, but it will require new tools to make the technique accessible & efficient. Here’s hoping to a Non-Linear future!
