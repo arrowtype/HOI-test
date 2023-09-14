@@ -20,6 +20,8 @@ This repo includes UFO sources plus a designspace which sets up a few simple non
 
 A later addition has added tests with Cubic NLI to show how Cubic interpolation is possible, but somewhat harder to achieve, and an example using standard (linear) interpolation to show its limitations.
 
+Later edit (Sep 2023): BlackFoundry also shared [this script for generating the unintuitive "offcurve" source](https://github.com/BlackFoundryCom/bezier-interpolation/tree/main) from an intuitive "target" source and two poles. I don’t think I had previously linked to it in this article, but it would be a useful part of making a proper design workflow for HOI/NLI.
+
 ## Additional Background
 
 ### Interpolation
