@@ -1,6 +1,6 @@
 # A shared exploration of Higher-Order Interpreation (HOI), AKA Non-Linear Interpolation (NLI)
 
-Editorial note, June 2025: This article was originally written and shared in November 2020. At the request of Underware, it was made private while they worked to further their commercialization of the idea of HOI. It’s been about 4.5 years since then, and Underware has made great strides, both in their technical execution of the technology and (seemingly) in their commercialization of it, as exemplified by their collaboration with Microsoft on [Kermit, the font](https://www.kermit-font.com/). So, it seems like a good time to re-publish this exploration and attempted explanation of the math that underpins the amazing visual feats.
+Editorial note, June 2025: This article was originally written and shared in November 2020. At the request of Underware, I made this full repo private and [re-released a simplified version]([url](https://github.com/arrowtype/NLI-test)), while Underware worked to further their commercialization of the idea of HOI. It’s been about 4.5 years since then, and Underware has made great strides, both in their technical execution of the technology and (seemingly) in their commercialization of it, as exemplified by their collaboration with Microsoft on [Kermit, the font](https://www.kermit-font.com/). So, it seems like a good time to re-publish this exploration and attempted explanation of the math that underpins the amazing visual feats.
 
 ---
 
