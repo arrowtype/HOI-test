@@ -1,5 +1,9 @@
 # A shared exploration of Higher-Order Interpreation (HOI), AKA Non-Linear Interpolation (NLI)
 
+Editorial note, June 2025: This article was originally written and shared in November 2020. At the request of Underware, it was made private while they worked to further their commercialization of the idea of HOI. It’s been about 4.5 years since then, and Underware has made great strides, both in their technical execution of the technology and (seemingly) in their commercialization of it, as exemplified by their collaboration with Microsoft on [Kermit, the font](https://www.kermit-font.com/). So, it seems like a good time to re-publish this exploration and attempted explanation of the math that underpins the amazing visual feats.
+
+---
+
 [A simple web demo of this test font ↗](https://arrowtype.github.io/NLI-test/index.html)
 
 In April 2018, Underware Type stunned the TypoLabs Berlin audience by announcing their new concept of *Higher-Order Interpolation* (HOI). They explained this in [a must-read article](https://underware.nl/case-studies/hoi/), complete with helpful diagrams & animations to show the discovery. In fact, they probably describe it better there than I have here, so you might consider saving time and going straight to the original. But, if you’re still confused, this article (and trying it for yourself) might help explain it further!
