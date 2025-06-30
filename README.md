@@ -1,4 +1,4 @@
-# A shared exploration of Non-Linear Interpolation (NLI)
+# A shared exploration of Higher-Order Interpreation (HOI), AKA Non-Linear Interpolation (NLI)
 
 [A simple web demo of this test font ↗](https://arrowtype.github.io/NLI-test/index.html)
 
