@@ -167,6 +167,8 @@ Simplifying NLI by using a quadratic approach makes it reasonably approachable, 
 6. Set the values of both axes to 50%
 7. Adust Source C to make each point be the _offcurve_ points between all corresponding points of Sources A & B. Notably, Source C **won’t** look like the 50% shape – remember, this draw is just to set offcurves for interpolation paths, so it will be distorted by a little or a lot.
 
+Alternative to step 7: use [one of these scripts shared by Jeremie Hornus (of BlackFoundry) to generate the offcurves necessary to hit a target middle drawing](https://github.com/JeremieHornus/bezier-interpolation). 
+
 ## Cubic NLI workflow
 
 A workflow for Cubic NLI can be roughly similar to the quadratic workflow, but can involve drawing intended interpolation curves on a background layer, then matching this in the intermediate sources.
