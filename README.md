@@ -131,8 +131,8 @@ Here is a comparison from the amazing [Primer on Bézier Curves by Pomax](https:
 
 So, we can use that same principle to create the middle drawing of an NLI designspace. And then critically, because of the way Bézier curves & interpolation work, you need to make *two* axes:
 
-1. An axis going from Source A (start points in the interpolation) to Source B (offcurve points in the interpolation)
-2. An axis going from Source B (yes, repeated) to Source C (end points in the interpolation)
+1. An axis going from Source A (start points in the interpolation) to Source C (offcurve points in the interpolation)
+2. An axis going from Source C (yes, repeated) to Source B (end points in the interpolation)
 
 ```
 A: X=0   Y=0  
@@ -160,12 +160,12 @@ Simplifying NLI by using a quadratic approach makes it reasonably approachable, 
 ## Quadratic NLI workflow
 
 1. Draw Source A (start points)
-2. Draw Source C (end points)
-3. Copy Source A into Source B
-4. Make a designspace as described above
+2. Draw Source B (end points)
+3. Copy Source A into Source C
+4. Make a designspace as described above, where Source C is referenced _twice,_ for the offcurve corners.
 5. Open a preview of the designspace in Skateboard, then set both axes to track the horizontal (or vertical) position of the Space Window
 6. Set the values of both axes to 50%
-7. Adust Source B to make the output look correct as the halfway point between A & C. Notably, Source B **won’t** look like the 50% shape – remember, this draw is just to set offcurves for interpolation paths, so it will be distorted by a little or a lot.
+7. Adust Source C to make each point be the _offcurve_ points between all corresponding points of Sources A & B. Notably, Source C **won’t** look like the 50% shape – remember, this draw is just to set offcurves for interpolation paths, so it will be distorted by a little or a lot.
 
 ## Cubic NLI workflow
 
@@ -175,7 +175,7 @@ A workflow for Cubic NLI can be roughly similar to the quadratic workflow, but c
 
 Cubic curves can create a much wider range of shapes than quadratic curves – see the Pomax guide’s [Circles and quadratic Bézier curves](https://pomax.github.io/bezierinfo/#circles) and [Circles and cubic Bézier curves](https://pomax.github.io/bezierinfo/#circles_cubic) for demoes & explanations of this.
 
-Because quadratic curves are somewhat limited, that means that Quadratic NLI offers much more control than Linear interpolation, but not as much control as Cubic (or greater) NLI. But, it has the benefit of being more simpler to create than Cubic NLI.
+Because quadratic curves are somewhat limited, that means that Quadratic NLI offers much more control than Linear interpolation, but not as much control as Cubic (or greater) NLI. But, it has the benefit of being simpler to create than Cubic NLI.
 
 Specific limitations found in these quadratic NLI tests:
 - A rectangle gets slightly smaller when rotating 90 degrees
